@@ -49,28 +49,83 @@
 
 
 //create append function
-function append(parent, children) {
-    children.forEach(child => parent.appendChild(child))
-}
+// function append(parent, children) {
+//     children.forEach(child => parent.appendChild(child))
+// }
 // custom create element function
-function createElement(tagname, className ,innerHTML) {
-    let tag = document.createElement(tagname)
-    tag.className = className ||'';
-    tag.innerHTML = innerHTML ||'';
+// function createElement(tagname, className ,innerHTML) {
+//     let tag = document.createElement(tagname)
+//     tag.className = className ||'';
+//     tag.innerHTML = innerHTML ||'';
 
-    return tag
-}
+//     return tag
+// }
 
+
+// let list = document.getElementById('list')
+// let firstChild = list.firstElementChild
+
+// setTimeout(() => {
+//     firstChild.innerHTML = firstChild.innerHTML + `(modified)`
+//     firstChild.style.background = '#44f'
+
+// }, 3000)
+
+// setTimeout(() => {
+//     list.lastElementChild.remove()
+// }, 5000)
+
+
+// let list = document.getElementById('list')
+// let firstChild = list.firstElementChild
+
+// setTimeout(() => {
+//     firstChild.innerHTML = firstChild.innerHTML + `(programmer Mohaimin)`
+//     firstChild.style.color = ('#99f')
+// },2000)
 
 let list = document.getElementById('list')
+
 let firstChild = list.firstElementChild
 
 setTimeout(() => {
-    firstChild.innerHTML = firstChild.innerHTML + `(modified)`
-    firstChild.style.background = '#44f'
+    
+    firstChild.innerHTML = firstChild.innerHTML + `(Mohaimin)`
+    firstChild.style.color = '#89dba3'
+    firstChild.style.backgroundColor = 'orangered'
+}, 1000)
 
-}, 3000)
+// setTimeout(() => {
+//     list.lastElementChild.remove()
+//     list.lastElementChild.innerHTML = `programmer`
+//     list.lastElementChild.style.backgroundColor = '#999'
+// },3000)
 
-setTimeout(() => {
-    list.lastElementChild.remove()
-}, 5000)
+let lastC = list.lastElementChild.cloneNode()
+lastC.innerHTML = 'Four'
+list.appendChild(lastC)
+lastC.style.backgroundColor = '#99f'
+
+
+let lastC2 = list.lastElementChild.cloneNode()
+lastC2.innerHTML = 'Five'
+lastC2.style.backgroundColor = 'cyan'
+list.appendChild(lastC2)
+
+
+let lastC3 = list.lastElementChild.cloneNode(true)
+list.appendChild(lastC3)
+
+
+console.log(list.attributes);
+console.log(list.getAttribute('id'));
+console.log(list.getAttribute('class'));
+
+lastC.id = 'lastCID'
+lastC3.setAttribute('class', 'lastCLASS')
+
+function name() {
+    document.getElementById('$1')
+    document.getElementById('list');
+};
+
